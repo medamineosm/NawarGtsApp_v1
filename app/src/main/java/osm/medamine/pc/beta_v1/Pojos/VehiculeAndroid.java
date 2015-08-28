@@ -14,6 +14,15 @@ public class VehiculeAndroid {
 
     public VehiculeAndroid() {}
 
+    public VehiculeAndroid(String empty) {
+        this.id_vehicule = 0;
+        this.intitule = empty;
+        this.matricule = empty;
+        this.type = empty;
+        this.modele = empty;
+        this.groupe = empty;
+        this.chauffeur = empty;
+    }
     public VehiculeAndroid(int id_vehicule, String intitule, String matricule, String type, String modele, String groupe, String chauffeur) {
         this.id_vehicule = id_vehicule;
         this.intitule = intitule;

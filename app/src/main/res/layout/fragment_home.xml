@@ -3,8 +3,179 @@
     android:layout_height="match_parent"
     tools:context="osm.medamine.pc.beta_v1.Activity.fragment_home">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:id="@+id/fragment_home">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:id="@+id/SendBtn"
+            android:layout_marginTop="56dp"
+            android:layout_below="@+id/edUrl"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edUrl"
+            android:layout_below="@+id/tvChauffeur"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Identifiant"
+            android:id="@+id/tvIdentifiant"
+            android:layout_marginTop="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intituler"
+            android:id="@+id/tvIntituler"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/tvIdentifiant"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/tvIdentifiant"
+            android:layout_alignEnd="@+id/tvIdentifiant" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:id="@+id/tvType"
+            android:layout_marginTop="26dp"
+            android:layout_below="@+id/tvMatricule"
+            android:layout_alignRight="@+id/tvIdentifiant"
+            android:layout_alignEnd="@+id/tvIdentifiant" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matricule"
+            android:id="@+id/tvMatricule"
+            android:layout_below="@+id/tvIntituler"
+            android:layout_marginTop="24dp"
+            android:layout_alignRight="@+id/tvType"
+            android:layout_alignEnd="@+id/tvType" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Model"
+            android:id="@+id/tvModele"
+            android:layout_below="@+id/tvType"
+            android:layout_alignRight="@+id/tvGroupe"
+            android:layout_alignEnd="@+id/tvGroupe"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Groupe"
+            android:id="@+id/tvGroupe"
+            android:layout_below="@+id/tvModele"
+            android:layout_alignRight="@+id/tvChauffeur"
+            android:layout_alignEnd="@+id/tvChauffeur"
+            android:layout_marginTop="34dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chauffeur :"
+            android:id="@+id/tvChauffeur"
+            android:layout_below="@+id/tvGroupe"
+            android:layout_alignLeft="@+id/tvIntituler"
+            android:layout_alignStart="@+id/tvIntituler"
+            android:layout_marginTop="38dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edIdentifiant"
+            android:layout_above="@+id/tvMatricule"
+            android:layout_alignRight="@+id/edIntituler"
+            android:layout_alignEnd="@+id/edIntituler"
+            android:layout_alignLeft="@+id/edIntituler"
+            android:layout_alignStart="@+id/edIntituler" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edIntituler"
+            android:layout_alignBottom="@+id/tvIdentifiant"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/SendBtn"
+            android:layout_alignStart="@+id/SendBtn" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edMatricule"
+            android:layout_above="@+id/tvType"
+            android:layout_alignLeft="@+id/edIdentifiant"
+            android:layout_alignStart="@+id/edIdentifiant"
+            android:layout_alignRight="@+id/edIdentifiant"
+            android:layout_alignEnd="@+id/edIdentifiant"
+            android:layout_below="@+id/edIdentifiant" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edType"
+            android:layout_above="@+id/tvModele"
+            android:layout_alignRight="@+id/edMatricule"
+            android:layout_alignEnd="@+id/edMatricule"
+            android:layout_below="@+id/edMatricule"
+            android:layout_alignLeft="@+id/edMatricule"
+            android:layout_alignStart="@+id/edMatricule" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edModel"
+            android:layout_alignBottom="@+id/tvModele"
+            android:layout_alignLeft="@+id/edMatricule"
+            android:layout_alignStart="@+id/edMatricule"
+            android:layout_alignRight="@+id/edMatricule"
+            android:layout_alignEnd="@+id/edMatricule"
+            android:layout_below="@+id/edType" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edGroupe"
+            android:layout_above="@+id/tvChauffeur"
+            android:layout_alignLeft="@+id/edModel"
+            android:layout_alignStart="@+id/edModel"
+            android:layout_alignRight="@+id/edType"
+            android:layout_alignEnd="@+id/edType"
+            android:layout_below="@+id/edModel" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edChauffeur"
+            android:layout_above="@+id/edUrl"
+            android:layout_alignLeft="@+id/edModel"
+            android:layout_alignStart="@+id/edModel"
+            android:layout_below="@+id/edGroupe"
+            android:layout_alignRight="@+id/edGroupe"
+            android:layout_alignEnd="@+id/edGroupe" />
+
+    </RelativeLayout>
 </FrameLayout>

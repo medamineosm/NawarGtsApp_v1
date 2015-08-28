@@ -34,7 +34,7 @@
 
     <fragment
         android:id="@+id/fragment_navigation_drawer"
-        android:name="osm.medamine.pc.beta_v1.Activity.FragmentDrawer"
+        android:name="osm.medamine.pc.beta_v1.Fragments.FragmentDrawer"
         android:layout_width="@dimen/nav_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"

@@ -3,6 +3,7 @@ package osm.medamine.pc.beta_v1.Activity;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +13,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import osm.medamine.pc.beta_v1.Fragments.FragmentDrawer;
+import osm.medamine.pc.beta_v1.Fragments.HomeFragment;
+import osm.medamine.pc.beta_v1.Fragments.MapFragment;
+import osm.medamine.pc.beta_v1.Pojos.VehiculeAndroid;
 import osm.medamine.pc.beta_v1.R;
 
 
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -76,11 +82,11 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 fragment = new HomeFragment();
                 title = getString(R.string.title_home);
                 break;
-            /*case 1:
-                fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+            case 1:
+                fragment = new MapFragment();
+                title = getString(R.string.title_map);
                 break;
-            case 2:
+            /*case 2:
                 fragment = new MessagesFragment();
                 title = getString(R.string.title_messages);
                 break;*/
@@ -98,4 +104,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             getSupportActionBar().setTitle(title);
         }
     }
+
+
 }

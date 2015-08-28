@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
@@ -94,7 +95,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         getLoaderManager().initLoader(0, null, this);
     }
 
-
     /**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the
@@ -143,8 +143,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             // perform the user login attempt.
             showProgress(true);
             mAuthTask = new UserLoginTask(matricule, password);
-            mAuthTask.execute("http://41.141.46.87:8283/NawarGTS/json/authentification");
-            //mAuthTask.execute("http://192.168.1.60:8080/jsonserver/LoginServlet");
+            mAuthTask.execute("http://105.154.27.158:8283/NawarGTS/json/authentification");
+            //mAuthTask.execute("http://192.168.1.12:8080/jsonserver/LoginServlet");
         }
     }
 
@@ -238,7 +238,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         int IS_PRIMARY = 1;
     }
 
-
     private void addMatriculesToAutoComplete(List<String> matriculeAddressCollection) {
         //Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
         ArrayAdapter<String> adapter =
@@ -292,7 +291,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         protected void onPostExecute(final String success) {
             mAuthTask = null;
             showProgress(false);
-            Toast.makeText(getApplicationContext(), success.toString(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), success.toString(), Toast.LENGTH_LONG).show();
             if(success.equals("")){
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
@@ -303,7 +302,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 Gson gson = new Gson();
                 Type type = new TypeToken<VehiculeAndroid>() {}.getType();
                 Vand = gson.fromJson(success,type);
-                Toast.makeText(getApplicationContext(), Vand.toString(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), Vand.toString(), Toast.LENGTH_LONG).show();
                 //finish();
             }
 
@@ -314,6 +313,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 showProgress(false);
             }
         }
+
+
 }
 
 
